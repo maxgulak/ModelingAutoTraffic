@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ModelingAutoTraffic
 {
@@ -18,19 +8,11 @@ namespace ModelingAutoTraffic
  
         private TransportSettingModel _typeTransport;
 
-
         private TransportSettingModel _speedTransport;
-
 
         private delegate bool Validate(System.Windows.Forms.TextBox textBox, out string errorMessge);
 
         private Validate _validate;
-
-  
-        private bool _isActiveSpeedTransport = false;
-
-    
-        private bool _isError = false;
 
         public TransportSettingModel TypeTransport
         {
@@ -38,16 +20,13 @@ namespace ModelingAutoTraffic
             set => _typeTransport = value;
         }
 
-
         public TransportSettingModel SpeedTransport
         {
             get => _speedTransport;
             set => _speedTransport = value;
         }
 
-
         private int timeApeare;
-
 
         public int getTimeApeare
         {
@@ -113,8 +92,7 @@ namespace ModelingAutoTraffic
 
 
             SetValueTypeTransport();
-           SetValueSpeedTransport();
-
+            SetValueSpeedTransport();
         }
 
         private System.Windows.Forms.TextBox GetActiveElement()
