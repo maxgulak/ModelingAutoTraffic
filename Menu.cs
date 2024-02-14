@@ -74,7 +74,7 @@ namespace ModelingAutoTraffic
         {
             Process.Start(new ProcessStartInfo
             {
-                FileName = @"file:///C:\Users\vinsh\source\repos\ModelingAutoTraffic\о%20системе.html",
+                FileName = @"file:///C:\Users\User\source\repos\ModelingAutoTraffic\о%20системе.html",
                 UseShellExecute = true
             });
         }

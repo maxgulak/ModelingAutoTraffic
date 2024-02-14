@@ -156,6 +156,45 @@ namespace ModelingAutoTraffic
             sett_form.ShowDialog();
         }
 
+        //Новая реализация "старт"  и "стоп"
+        private void buttonPause_Click(object sender, EventArgs e)
+        {
+            _isStopped = true;
+
+            // Остановить все таймеры
+            timer.Stop();
+            timerUpLigth.Stop();
+            timerDownLigth.Stop();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!DesignMode && !trigger)
+            {
+                timer.Interval = 30;
+                timer.Tick += new EventHandler(timer1_FirstTick);
+                timer.Tick += new EventHandler(timer1_SecondTick);
+
+                if (isTonnel)
+                {
+                    timerUpLigth.Interval = 10;
+                    timerUpLigth.Tick += new EventHandler(timerUpLigthTick);
+
+                    timerDownLigth.Interval = 10;
+                    timerDownLigth.Tick += new EventHandler(timerDownLigthTick);
+                }
+
+                // Запустить все таймеры
+                timer.Start();
+                timerUpLigth.Start();
+                timerDownLigth.Start();
+            }
+            trigger = true;
+            _isStopped = false;
+        }
+
+
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
             if (!DesignMode && !trigger)
@@ -179,6 +218,7 @@ namespace ModelingAutoTraffic
             trigger = true;
             _isStopped = false;
         }
+        
 
         private void buttonPause_Click(object sender, EventArgs e)
         {
@@ -197,6 +237,7 @@ namespace ModelingAutoTraffic
             timerDownLigth.Stop();
         }
 
+        */
         private void buttonStop_Click(object sender, EventArgs e)
         {
 
@@ -867,6 +908,48 @@ namespace ModelingAutoTraffic
             Controls.Add(_timerDownTonnel);
         }
 
+
+
+
+        //Новая версия таймера светофора
+
+        private DateTime _lastUpdateTime = DateTime.Now;
+
+        private void timerUpLigthTick(object sender, EventArgs e)
+        {
+            TimeSpan elapsedTime = DateTime.Now - _lastUpdateTime;
+            _timerUpTonnelValue -= (float)elapsedTime.TotalSeconds;
+
+            if (_timerUpTonnelValue <= 0)
+            {
+                _timerUpTonnelValue = TimeTrafficLight; // Сброс времени при достижении нуля
+                _timerDownTonnelValue = 0; // Сброс времени нижнего светофора
+            }
+
+            _timerUpTonnel.Text = $"{Math.Max(0, Math.Round(_timerUpTonnelValue, 1))}"; // Отображение времени
+
+            _lastUpdateTime = DateTime.Now;
+        }
+
+        private void timerDownLigthTick(object sender, EventArgs e)
+        {
+            TimeSpan elapsedTime = DateTime.Now - _lastUpdateTime;
+            _timerDownTonnelValue -= (float)elapsedTime.TotalSeconds;
+
+            if (_timerDownTonnelValue <= 0)
+            {
+                _timerDownTonnelValue = TimeTrafficLight; // Сброс времени при достижении нуля
+                _timerUpTonnelValue = 0; // Сброс времени верхнего светофора
+            }
+
+            _timerDownTonnel.Text = $"{Math.Max(0, Math.Round(_timerDownTonnelValue, 1))}"; // Отображение времени
+
+            _lastUpdateTime = DateTime.Now;
+        }
+
+
+        /*
+      
         /// <summary>
         /// Обработчик тиков верхнего таймера.
         /// </summary>
@@ -904,6 +987,9 @@ namespace ModelingAutoTraffic
 
             _timerDownTonnel.Text = $"{Math.Round(_timerDownTonnelValue, 1)}";
         }
+
+
+        */
 
         private void PaintRoad()
         {
