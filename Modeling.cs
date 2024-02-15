@@ -25,7 +25,6 @@ namespace ModelingAutoTraffic
         int x1 = -10;
         int x = 300;
         int count = 0;
-        int[] speed = { 30, 60, 90 };
         Timer timer = new Timer();
 
         private int _minSpeed = MIN_SPEED_CITY;
@@ -48,11 +47,11 @@ namespace ModelingAutoTraffic
 
         
         private const int MIN_SPEED_CITY = 5;
-
-        
         private const int MAX_SPEED_CITY = 7;
 
-        
+        private const int MIN_SPEED_TONNEL = 3;
+        private const int MAX_SPEED_TONNEL = 5;
+
         private const int OFFSET_CAR_STOP = 100;
         private const string NAME_UP_SIGNUM = "Up";
         private const string NAME_DOWN_SIGNUM = "Down";
@@ -1063,6 +1062,9 @@ namespace ModelingAutoTraffic
                         pictureSpeedLimitSecond.Visible = false;
                         pictureSpeedLimitThird.Visible = false;
                         pictureSpeedLimitFourth.Visible = false;
+
+                        _minSpeed = MIN_SPEED_TONNEL;
+                        _maxSpeed = MAX_SPEED_TONNEL;
 
                         CountWays = 2;
                         CountLines = 1;
