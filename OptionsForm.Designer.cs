@@ -72,10 +72,9 @@
             // 
             this.labelTypeSpeed.AutoSize = true;
             this.labelTypeSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTypeSpeed.Location = new System.Drawing.Point(125, 53);
-            this.labelTypeSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTypeSpeed.Location = new System.Drawing.Point(90, 29);
             this.labelTypeSpeed.Name = "labelTypeSpeed";
-            this.labelTypeSpeed.Size = new System.Drawing.Size(117, 25);
+            this.labelTypeSpeed.Size = new System.Drawing.Size(97, 20);
             this.labelTypeSpeed.TabIndex = 17;
             this.labelTypeSpeed.Text = "Вид потока";
             // 
@@ -83,16 +82,16 @@
             // 
             this.labelDet_Time.AutoSize = true;
             this.labelDet_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDet_Time.Location = new System.Drawing.Point(340, 153);
+            this.labelDet_Time.Location = new System.Drawing.Point(271, 126);
             this.labelDet_Time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDet_Time.Name = "labelDet_Time";
-            this.labelDet_Time.Size = new System.Drawing.Size(339, 25);
+            this.labelDet_Time.Size = new System.Drawing.Size(276, 20);
             this.labelDet_Time.TabIndex = 23;
             this.labelDet_Time.Text = "Интервал появления автомобилей";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(428, 177);
+            this.numericUpDown1.Location = new System.Drawing.Point(351, 154);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             3,
@@ -106,7 +105,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(133, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
             this.numericUpDown1.TabIndex = 24;
             this.numericUpDown1.Value = new decimal(new int[] {
             3,
@@ -117,10 +116,10 @@
             // buttonOK
             // 
             this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOK.Location = new System.Drawing.Point(268, 265);
+            this.buttonOK.Location = new System.Drawing.Point(210, 202);
             this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(153, 64);
+            this.buttonOK.Size = new System.Drawing.Size(115, 52);
             this.buttonOK.TabIndex = 26;
             this.buttonOK.Text = "Сохранить и выйти";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -128,19 +127,20 @@
             // 
             // textBoxDispTime
             // 
-            this.textBoxDispTime.Location = new System.Drawing.Point(428, 238);
+            this.textBoxDispTime.Location = new System.Drawing.Point(351, 202);
+            this.textBoxDispTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDispTime.Name = "textBoxDispTime";
-            this.textBoxDispTime.Size = new System.Drawing.Size(132, 22);
+            this.textBoxDispTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxDispTime.TabIndex = 22;
             // 
             // labelLawTime
             // 
             this.labelLawTime.AutoSize = true;
             this.labelLawTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLawTime.Location = new System.Drawing.Point(393, 99);
+            this.labelLawTime.Location = new System.Drawing.Point(312, 74);
             this.labelLawTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLawTime.Name = "labelLawTime";
-            this.labelLawTime.Size = new System.Drawing.Size(215, 25);
+            this.labelLawTime.Size = new System.Drawing.Size(178, 20);
             this.labelLawTime.TabIndex = 27;
             this.labelLawTime.Text = "Закон распределения";
             // 
@@ -148,10 +148,10 @@
             // 
             this.labelDispTime.AutoSize = true;
             this.labelDispTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDispTime.Location = new System.Drawing.Point(437, 218);
+            this.labelDispTime.Location = new System.Drawing.Point(341, 179);
             this.labelDispTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDispTime.Name = "labelDispTime";
-            this.labelDispTime.Size = new System.Drawing.Size(115, 25);
+            this.labelDispTime.Size = new System.Drawing.Size(91, 20);
             this.labelDispTime.TabIndex = 28;
             this.labelDispTime.Text = "Дисперсия";
             // 
@@ -159,49 +159,52 @@
             // 
             this.labelMOTime.AutoSize = true;
             this.labelMOTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMOTime.Location = new System.Drawing.Point(371, 153);
+            this.labelMOTime.Location = new System.Drawing.Point(294, 126);
             this.labelMOTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMOTime.Name = "labelMOTime";
-            this.labelMOTime.Size = new System.Drawing.Size(274, 25);
+            this.labelMOTime.Size = new System.Drawing.Size(219, 20);
             this.labelMOTime.TabIndex = 29;
             this.labelMOTime.Text = "Математическое ожидание";
             // 
             // textBoxMOTime
             // 
-            this.textBoxMOTime.Location = new System.Drawing.Point(428, 178);
+            this.textBoxMOTime.Location = new System.Drawing.Point(353, 154);
+            this.textBoxMOTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMOTime.Name = "textBoxMOTime";
-            this.textBoxMOTime.Size = new System.Drawing.Size(132, 22);
+            this.textBoxMOTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxMOTime.TabIndex = 30;
             // 
             // lawRandomTime
             // 
             this.lawRandomTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lawRandomTime.FormattingEnabled = true;
-            this.lawRandomTime.Location = new System.Drawing.Point(428, 121);
+            this.lawRandomTime.Location = new System.Drawing.Point(353, 98);
             this.lawRandomTime.Margin = new System.Windows.Forms.Padding(2);
             this.lawRandomTime.Name = "lawRandomTime";
-            this.lawRandomTime.Size = new System.Drawing.Size(132, 24);
+            this.lawRandomTime.Size = new System.Drawing.Size(100, 21);
             this.lawRandomTime.TabIndex = 31;
             this.lawRandomTime.SelectedIndexChanged += new System.EventHandler(this.comboBoxRand_SV_SelectedIndexChanged);
             // 
             // textBoxIntervalRTime
             // 
-            this.textBoxIntervalRTime.Location = new System.Drawing.Point(428, 238);
+            this.textBoxIntervalRTime.Location = new System.Drawing.Point(351, 202);
+            this.textBoxIntervalRTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIntervalRTime.Name = "textBoxIntervalRTime";
-            this.textBoxIntervalRTime.Size = new System.Drawing.Size(132, 22);
+            this.textBoxIntervalRTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalRTime.TabIndex = 22;
             // 
             // textBoxIntervalLTime
             // 
-            this.textBoxIntervalLTime.Location = new System.Drawing.Point(428, 177);
+            this.textBoxIntervalLTime.Location = new System.Drawing.Point(351, 154);
+            this.textBoxIntervalLTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIntervalLTime.Name = "textBoxIntervalLTime";
-            this.textBoxIntervalLTime.Size = new System.Drawing.Size(132, 22);
+            this.textBoxIntervalLTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalLTime.TabIndex = 22;
             // 
             // determinateNumberSpeed
             // 
             this.determinateNumberSpeed.InterceptArrowKeys = false;
-            this.determinateNumberSpeed.Location = new System.Drawing.Point(94, 175);
+            this.determinateNumberSpeed.Location = new System.Drawing.Point(89, 151);
             this.determinateNumberSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.determinateNumberSpeed.Maximum = new decimal(new int[] {
             90,
@@ -215,18 +218,22 @@
             0});
             this.determinateNumberSpeed.Name = "determinateNumberSpeed";
             this.determinateNumberSpeed.ReadOnly = true;
-            this.determinateNumberSpeed.Size = new System.Drawing.Size(120, 22);
+            this.determinateNumberSpeed.Size = new System.Drawing.Size(90, 20);
             this.determinateNumberSpeed.TabIndex = 24;
-            this.determinateNumberSpeed.Value = (decimal)50;
+            this.determinateNumberSpeed.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // labelSpeed
             // 
             this.labelSpeed.AutoSize = true;
             this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSpeed.Location = new System.Drawing.Point(72, 153);
+            this.labelSpeed.Location = new System.Drawing.Point(53, 126);
             this.labelSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(170, 25);
+            this.labelSpeed.Size = new System.Drawing.Size(136, 20);
             this.labelSpeed.TabIndex = 23;
             this.labelSpeed.Text = "Скорость машин";
             // 
@@ -235,8 +242,8 @@
             this.menuSettings.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuSettings.Location = new System.Drawing.Point(0, 0);
             this.menuSettings.Name = "menuSettings";
-            this.menuSettings.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuSettings.Size = new System.Drawing.Size(646, 24);
+            this.menuSettings.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
+            this.menuSettings.Size = new System.Drawing.Size(554, 24);
             this.menuSettings.TabIndex = 35;
             this.menuSettings.Text = "menuStrip1";
             // 
@@ -244,28 +251,29 @@
             // 
             this.lawRandomSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lawRandomSpeed.FormattingEnabled = true;
-            this.lawRandomSpeed.Location = new System.Drawing.Point(91, 121);
+            this.lawRandomSpeed.Location = new System.Drawing.Point(87, 98);
             this.lawRandomSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.lawRandomSpeed.Name = "lawRandomSpeed";
-            this.lawRandomSpeed.Size = new System.Drawing.Size(132, 24);
+            this.lawRandomSpeed.Size = new System.Drawing.Size(100, 21);
             this.lawRandomSpeed.TabIndex = 31;
             this.lawRandomSpeed.SelectedIndexChanged += new System.EventHandler(this.lowRandomSpeed_SelectedIndexChanged);
             // 
             // textBoxMOSpeed
             // 
-            this.textBoxMOSpeed.Location = new System.Drawing.Point(91, 178);
+            this.textBoxMOSpeed.Location = new System.Drawing.Point(87, 154);
+            this.textBoxMOSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMOSpeed.Name = "textBoxMOSpeed";
-            this.textBoxMOSpeed.Size = new System.Drawing.Size(132, 22);
+            this.textBoxMOSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxMOSpeed.TabIndex = 30;
             // 
             // labelMOSpeed
             // 
             this.labelMOSpeed.AutoSize = true;
             this.labelMOSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMOSpeed.Location = new System.Drawing.Point(32, 155);
+            this.labelMOSpeed.Location = new System.Drawing.Point(23, 128);
             this.labelMOSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMOSpeed.Name = "labelMOSpeed";
-            this.labelMOSpeed.Size = new System.Drawing.Size(274, 25);
+            this.labelMOSpeed.Size = new System.Drawing.Size(219, 20);
             this.labelMOSpeed.TabIndex = 29;
             this.labelMOSpeed.Text = "Математическое ожидание";
             // 
@@ -273,10 +281,10 @@
             // 
             this.labelDispSpeed.AutoSize = true;
             this.labelDispSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDispSpeed.Location = new System.Drawing.Point(93, 218);
+            this.labelDispSpeed.Location = new System.Drawing.Point(62, 176);
             this.labelDispSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDispSpeed.Name = "labelDispSpeed";
-            this.labelDispSpeed.Size = new System.Drawing.Size(115, 25);
+            this.labelDispSpeed.Size = new System.Drawing.Size(91, 20);
             this.labelDispSpeed.TabIndex = 28;
             this.labelDispSpeed.Text = "Дисперсия";
             // 
@@ -284,48 +292,53 @@
             // 
             this.labelLawSpeed.AutoSize = true;
             this.labelLawSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLawSpeed.Location = new System.Drawing.Point(55, 99);
+            this.labelLawSpeed.Location = new System.Drawing.Point(44, 74);
             this.labelLawSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLawSpeed.Name = "labelLawSpeed";
-            this.labelLawSpeed.Size = new System.Drawing.Size(215, 25);
+            this.labelLawSpeed.Size = new System.Drawing.Size(178, 20);
             this.labelLawSpeed.TabIndex = 27;
             this.labelLawSpeed.Text = "Закон распределения";
             // 
             // textBoxIntervalRSpeed
             // 
-            this.textBoxIntervalRSpeed.Location = new System.Drawing.Point(91, 238);
+            this.textBoxIntervalRSpeed.Location = new System.Drawing.Point(86, 202);
+            this.textBoxIntervalRSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIntervalRSpeed.Name = "textBoxIntervalRSpeed";
-            this.textBoxIntervalRSpeed.Size = new System.Drawing.Size(132, 22);
+            this.textBoxIntervalRSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalRSpeed.TabIndex = 22;
             // 
             // textBoxDispSpeed
             // 
-            this.textBoxDispSpeed.Location = new System.Drawing.Point(91, 238);
+            this.textBoxDispSpeed.Location = new System.Drawing.Point(86, 202);
+            this.textBoxDispSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDispSpeed.Name = "textBoxDispSpeed";
-            this.textBoxDispSpeed.Size = new System.Drawing.Size(132, 22);
+            this.textBoxDispSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxDispSpeed.TabIndex = 22;
             // 
             // textBoxIntervalLSpeed
             // 
-            this.textBoxIntervalLSpeed.Location = new System.Drawing.Point(91, 178);
+            this.textBoxIntervalLSpeed.Location = new System.Drawing.Point(87, 154);
+            this.textBoxIntervalLSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIntervalLSpeed.Name = "textBoxIntervalLSpeed";
-            this.textBoxIntervalLSpeed.Size = new System.Drawing.Size(132, 22);
+            this.textBoxIntervalLSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalLSpeed.TabIndex = 22;
             // 
             // textBoxIntensSpeed
             // 
-            this.textBoxIntensSpeed.Location = new System.Drawing.Point(91, 176);
+            this.textBoxIntensSpeed.Location = new System.Drawing.Point(87, 152);
+            this.textBoxIntensSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIntensSpeed.Name = "textBoxIntensSpeed";
-            this.textBoxIntensSpeed.Size = new System.Drawing.Size(132, 22);
+            this.textBoxIntensSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntensSpeed.TabIndex = 22;
             // 
             // labelSettingTime
             // 
             this.labelSettingTime.AutoSize = true;
             this.labelSettingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSettingTime.Location = new System.Drawing.Point(351, 9);
+            this.labelSettingTime.Location = new System.Drawing.Point(275, 9);
+            this.labelSettingTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSettingTime.Name = "labelSettingTime";
-            this.labelSettingTime.Size = new System.Drawing.Size(316, 25);
+            this.labelSettingTime.Size = new System.Drawing.Size(256, 20);
             this.labelSettingTime.TabIndex = 36;
             this.labelSettingTime.Text = "Настройка параметров времени";
             // 
@@ -333,10 +346,9 @@
             // 
             this.labelSettingSpeed.AutoSize = true;
             this.labelSettingSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSettingSpeed.Location = new System.Drawing.Point(13, 11);
-            this.labelSettingSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSettingSpeed.Location = new System.Drawing.Point(10, 9);
             this.labelSettingSpeed.Name = "labelSettingSpeed";
-            this.labelSettingSpeed.Size = new System.Drawing.Size(320, 25);
+            this.labelSettingSpeed.Size = new System.Drawing.Size(260, 20);
             this.labelSettingSpeed.TabIndex = 37;
             this.labelSettingSpeed.Text = "Настройка параметров скорости";
             // 
@@ -344,10 +356,10 @@
             // 
             this.labelIntervalLSpeed.AutoSize = true;
             this.labelIntervalLSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntervalLSpeed.Location = new System.Drawing.Point(41, 154);
+            this.labelIntervalLSpeed.Location = new System.Drawing.Point(30, 127);
             this.labelIntervalLSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntervalLSpeed.Name = "labelIntervalLSpeed";
-            this.labelIntervalLSpeed.Size = new System.Drawing.Size(250, 25);
+            this.labelIntervalLSpeed.Size = new System.Drawing.Size(208, 20);
             this.labelIntervalLSpeed.TabIndex = 31;
             this.labelIntervalLSpeed.Text = "Левая граница интервала";
             // 
@@ -355,10 +367,10 @@
             // 
             this.labelIntensSpeed.AutoSize = true;
             this.labelIntensSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntensSpeed.Location = new System.Drawing.Point(82, 154);
+            this.labelIntensSpeed.Location = new System.Drawing.Point(61, 127);
             this.labelIntensSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntensSpeed.Name = "labelIntensSpeed";
-            this.labelIntensSpeed.Size = new System.Drawing.Size(156, 25);
+            this.labelIntensSpeed.Size = new System.Drawing.Size(126, 20);
             this.labelIntensSpeed.TabIndex = 39;
             this.labelIntensSpeed.Text = "Интенсивность";
             // 
@@ -366,10 +378,10 @@
             // 
             this.labelIntervalRTime.AutoSize = true;
             this.labelIntervalRTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntervalRTime.Location = new System.Drawing.Point(373, 218);
+            this.labelIntervalRTime.Location = new System.Drawing.Point(293, 179);
             this.labelIntervalRTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntervalRTime.Name = "labelIntervalRTime";
-            this.labelIntervalRTime.Size = new System.Drawing.Size(259, 25);
+            this.labelIntervalRTime.Size = new System.Drawing.Size(217, 20);
             this.labelIntervalRTime.TabIndex = 40;
             this.labelIntervalRTime.Text = "Правая граница интервала";
             // 
@@ -377,10 +389,10 @@
             // 
             this.labelIntensTime.AutoSize = true;
             this.labelIntensTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntensTime.Location = new System.Drawing.Point(413, 155);
+            this.labelIntensTime.Location = new System.Drawing.Point(326, 128);
             this.labelIntensTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntensTime.Name = "labelIntensTime";
-            this.labelIntensTime.Size = new System.Drawing.Size(156, 25);
+            this.labelIntensTime.Size = new System.Drawing.Size(126, 20);
             this.labelIntensTime.TabIndex = 41;
             this.labelIntensTime.Text = "Интенсивность";
             // 
@@ -388,10 +400,10 @@
             // 
             this.labelIntervalLTime.AutoSize = true;
             this.labelIntervalLTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntervalLTime.Location = new System.Drawing.Point(382, 155);
+            this.labelIntervalLTime.Location = new System.Drawing.Point(302, 128);
             this.labelIntervalLTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntervalLTime.Name = "labelIntervalLTime";
-            this.labelIntervalLTime.Size = new System.Drawing.Size(250, 25);
+            this.labelIntervalLTime.Size = new System.Drawing.Size(208, 20);
             this.labelIntervalLTime.TabIndex = 42;
             this.labelIntervalLTime.Text = "Левая граница интервала";
             // 
@@ -399,25 +411,28 @@
             // 
             this.labelTypeTime.AutoSize = true;
             this.labelTypeTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTypeTime.Location = new System.Drawing.Point(431, 43);
+            this.labelTypeTime.Location = new System.Drawing.Point(358, 29);
+            this.labelTypeTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTypeTime.Name = "labelTypeTime";
-            this.labelTypeTime.Size = new System.Drawing.Size(117, 25);
+            this.labelTypeTime.Size = new System.Drawing.Size(97, 20);
             this.labelTypeTime.TabIndex = 43;
             this.labelTypeTime.Text = "Вид потока";
             // 
             // textBoxIntensTime
             // 
-            this.textBoxIntensTime.Location = new System.Drawing.Point(428, 178);
+            this.textBoxIntensTime.Location = new System.Drawing.Point(353, 154);
+            this.textBoxIntensTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIntensTime.Name = "textBoxIntensTime";
-            this.textBoxIntensTime.Size = new System.Drawing.Size(132, 22);
+            this.textBoxIntensTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntensTime.TabIndex = 44;
             // 
             // comboBoxTypeSpeed
             // 
             this.comboBoxTypeSpeed.FormattingEnabled = true;
-            this.comboBoxTypeSpeed.Location = new System.Drawing.Point(59, 69);
+            this.comboBoxTypeSpeed.Location = new System.Drawing.Point(51, 51);
+            this.comboBoxTypeSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTypeSpeed.Name = "comboBoxTypeSpeed";
-            this.comboBoxTypeSpeed.Size = new System.Drawing.Size(212, 24);
+            this.comboBoxTypeSpeed.Size = new System.Drawing.Size(160, 21);
             this.comboBoxTypeSpeed.TabIndex = 45;
             this.comboBoxTypeSpeed.SelectedIndexChanged += new System.EventHandler(this.comboBoxTypeSpeed_SelectedIndexChanged);
             // 
@@ -425,26 +440,28 @@
             // 
             this.labelRSpeed.AutoSize = true;
             this.labelRSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRSpeed.Location = new System.Drawing.Point(41, 218);
+            this.labelRSpeed.Location = new System.Drawing.Point(23, 176);
+            this.labelRSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRSpeed.Name = "labelRSpeed";
-            this.labelRSpeed.Size = new System.Drawing.Size(259, 25);
+            this.labelRSpeed.Size = new System.Drawing.Size(217, 20);
             this.labelRSpeed.TabIndex = 46;
             this.labelRSpeed.Text = "Правая граница интервала";
             // 
             // comboBoxTypeTime
             // 
             this.comboBoxTypeTime.FormattingEnabled = true;
-            this.comboBoxTypeTime.Location = new System.Drawing.Point(397, 69);
+            this.comboBoxTypeTime.Location = new System.Drawing.Point(321, 51);
+            this.comboBoxTypeTime.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTypeTime.Name = "comboBoxTypeTime";
-            this.comboBoxTypeTime.Size = new System.Drawing.Size(212, 24);
+            this.comboBoxTypeTime.Size = new System.Drawing.Size(160, 21);
             this.comboBoxTypeTime.TabIndex = 47;
             this.comboBoxTypeTime.SelectedIndexChanged += new System.EventHandler(this.comboBoxTypeTime_SelectedIndexChanged);
             // 
             // OptionsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 328);
+            this.ClientSize = new System.Drawing.Size(554, 261);
             this.Controls.Add(this.comboBoxTypeTime);
             this.Controls.Add(this.labelRSpeed);
             this.Controls.Add(this.comboBoxTypeSpeed);
