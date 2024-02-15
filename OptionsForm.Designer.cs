@@ -72,7 +72,7 @@
             // 
             this.labelTypeSpeed.AutoSize = true;
             this.labelTypeSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTypeSpeed.Location = new System.Drawing.Point(94, 43);
+            this.labelTypeSpeed.Location = new System.Drawing.Point(87, 29);
             this.labelTypeSpeed.Name = "labelTypeSpeed";
             this.labelTypeSpeed.Size = new System.Drawing.Size(97, 20);
             this.labelTypeSpeed.TabIndex = 17;
@@ -82,7 +82,7 @@
             // 
             this.labelDet_Time.AutoSize = true;
             this.labelDet_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDet_Time.Location = new System.Drawing.Point(340, 153);
+            this.labelDet_Time.Location = new System.Drawing.Point(235, 127);
             this.labelDet_Time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDet_Time.Name = "labelDet_Time";
             this.labelDet_Time.Size = new System.Drawing.Size(276, 20);
@@ -91,8 +91,8 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(428, 177);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Location = new System.Drawing.Point(323, 152);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             3,
             0,
@@ -116,8 +116,8 @@
             // buttonOK
             // 
             this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOK.Location = new System.Drawing.Point(268, 265);
-            this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOK.Location = new System.Drawing.Point(193, 225);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(115, 52);
             this.buttonOK.TabIndex = 26;
@@ -127,7 +127,7 @@
             // 
             // textBoxDispTime
             // 
-            this.textBoxDispTime.Location = new System.Drawing.Point(428, 238);
+            this.textBoxDispTime.Location = new System.Drawing.Point(323, 213);
             this.textBoxDispTime.Name = "textBoxDispTime";
             this.textBoxDispTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxDispTime.TabIndex = 22;
@@ -136,7 +136,7 @@
             // 
             this.labelLawTime.AutoSize = true;
             this.labelLawTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLawTime.Location = new System.Drawing.Point(393, 99);
+            this.labelLawTime.Location = new System.Drawing.Point(286, 77);
             this.labelLawTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLawTime.Name = "labelLawTime";
             this.labelLawTime.Size = new System.Drawing.Size(178, 20);
@@ -147,7 +147,7 @@
             // 
             this.labelDispTime.AutoSize = true;
             this.labelDispTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDispTime.Location = new System.Drawing.Point(437, 218);
+            this.labelDispTime.Location = new System.Drawing.Point(332, 192);
             this.labelDispTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDispTime.Name = "labelDispTime";
             this.labelDispTime.Size = new System.Drawing.Size(91, 20);
@@ -158,7 +158,7 @@
             // 
             this.labelMOTime.AutoSize = true;
             this.labelMOTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMOTime.Location = new System.Drawing.Point(371, 153);
+            this.labelMOTime.Location = new System.Drawing.Point(266, 127);
             this.labelMOTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMOTime.Name = "labelMOTime";
             this.labelMOTime.Size = new System.Drawing.Size(219, 20);
@@ -167,7 +167,7 @@
             // 
             // textBoxMOTime
             // 
-            this.textBoxMOTime.Location = new System.Drawing.Point(428, 178);
+            this.textBoxMOTime.Location = new System.Drawing.Point(323, 153);
             this.textBoxMOTime.Name = "textBoxMOTime";
             this.textBoxMOTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxMOTime.TabIndex = 30;
@@ -176,8 +176,8 @@
             // 
             this.lawRandomTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lawRandomTime.FormattingEnabled = true;
-            this.lawRandomTime.Location = new System.Drawing.Point(428, 121);
-            this.lawRandomTime.Margin = new System.Windows.Forms.Padding(2);
+            this.lawRandomTime.Location = new System.Drawing.Point(323, 99);
+            this.lawRandomTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lawRandomTime.Name = "lawRandomTime";
             this.lawRandomTime.Size = new System.Drawing.Size(100, 21);
             this.lawRandomTime.TabIndex = 31;
@@ -185,14 +185,14 @@
             // 
             // textBoxIntervalRTime
             // 
-            this.textBoxIntervalRTime.Location = new System.Drawing.Point(428, 238);
+            this.textBoxIntervalRTime.Location = new System.Drawing.Point(323, 213);
             this.textBoxIntervalRTime.Name = "textBoxIntervalRTime";
             this.textBoxIntervalRTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalRTime.TabIndex = 22;
             // 
             // textBoxIntervalLTime
             // 
-            this.textBoxIntervalLTime.Location = new System.Drawing.Point(428, 177);
+            this.textBoxIntervalLTime.Location = new System.Drawing.Point(323, 152);
             this.textBoxIntervalLTime.Name = "textBoxIntervalLTime";
             this.textBoxIntervalLTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalLTime.TabIndex = 22;
@@ -200,8 +200,8 @@
             // determinateNumberSpeed
             // 
             this.determinateNumberSpeed.InterceptArrowKeys = false;
-            this.determinateNumberSpeed.Location = new System.Drawing.Point(94, 175);
-            this.determinateNumberSpeed.Margin = new System.Windows.Forms.Padding(2);
+            this.determinateNumberSpeed.Location = new System.Drawing.Point(76, 149);
+            this.determinateNumberSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.determinateNumberSpeed.Maximum = new decimal(new int[] {
             90,
             0,
@@ -226,7 +226,7 @@
             // 
             this.labelSpeed.AutoSize = true;
             this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSpeed.Location = new System.Drawing.Point(72, 153);
+            this.labelSpeed.Location = new System.Drawing.Point(55, 127);
             this.labelSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSpeed.Name = "labelSpeed";
             this.labelSpeed.Size = new System.Drawing.Size(136, 20);
@@ -239,7 +239,7 @@
             this.menuSettings.Location = new System.Drawing.Point(0, 0);
             this.menuSettings.Name = "menuSettings";
             this.menuSettings.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuSettings.Size = new System.Drawing.Size(646, 24);
+            this.menuSettings.Size = new System.Drawing.Size(519, 24);
             this.menuSettings.TabIndex = 35;
             this.menuSettings.Text = "menuStrip1";
             // 
@@ -247,8 +247,8 @@
             // 
             this.lawRandomSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lawRandomSpeed.FormattingEnabled = true;
-            this.lawRandomSpeed.Location = new System.Drawing.Point(91, 121);
-            this.lawRandomSpeed.Margin = new System.Windows.Forms.Padding(2);
+            this.lawRandomSpeed.Location = new System.Drawing.Point(68, 99);
+            this.lawRandomSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lawRandomSpeed.Name = "lawRandomSpeed";
             this.lawRandomSpeed.Size = new System.Drawing.Size(100, 21);
             this.lawRandomSpeed.TabIndex = 31;
@@ -256,7 +256,7 @@
             // 
             // textBoxMOSpeed
             // 
-            this.textBoxMOSpeed.Location = new System.Drawing.Point(91, 178);
+            this.textBoxMOSpeed.Location = new System.Drawing.Point(74, 153);
             this.textBoxMOSpeed.Name = "textBoxMOSpeed";
             this.textBoxMOSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxMOSpeed.TabIndex = 30;
@@ -265,7 +265,7 @@
             // 
             this.labelMOSpeed.AutoSize = true;
             this.labelMOSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMOSpeed.Location = new System.Drawing.Point(32, 155);
+            this.labelMOSpeed.Location = new System.Drawing.Point(15, 130);
             this.labelMOSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMOSpeed.Name = "labelMOSpeed";
             this.labelMOSpeed.Size = new System.Drawing.Size(219, 20);
@@ -276,7 +276,7 @@
             // 
             this.labelDispSpeed.AutoSize = true;
             this.labelDispSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDispSpeed.Location = new System.Drawing.Point(93, 218);
+            this.labelDispSpeed.Location = new System.Drawing.Point(76, 192);
             this.labelDispSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDispSpeed.Name = "labelDispSpeed";
             this.labelDispSpeed.Size = new System.Drawing.Size(91, 20);
@@ -287,7 +287,7 @@
             // 
             this.labelLawSpeed.AutoSize = true;
             this.labelLawSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLawSpeed.Location = new System.Drawing.Point(55, 99);
+            this.labelLawSpeed.Location = new System.Drawing.Point(41, 77);
             this.labelLawSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLawSpeed.Name = "labelLawSpeed";
             this.labelLawSpeed.Size = new System.Drawing.Size(178, 20);
@@ -296,28 +296,28 @@
             // 
             // textBoxIntervalRSpeed
             // 
-            this.textBoxIntervalRSpeed.Location = new System.Drawing.Point(91, 238);
+            this.textBoxIntervalRSpeed.Location = new System.Drawing.Point(74, 213);
             this.textBoxIntervalRSpeed.Name = "textBoxIntervalRSpeed";
             this.textBoxIntervalRSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalRSpeed.TabIndex = 22;
             // 
             // textBoxDispSpeed
             // 
-            this.textBoxDispSpeed.Location = new System.Drawing.Point(91, 238);
+            this.textBoxDispSpeed.Location = new System.Drawing.Point(74, 213);
             this.textBoxDispSpeed.Name = "textBoxDispSpeed";
             this.textBoxDispSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxDispSpeed.TabIndex = 22;
             // 
             // textBoxIntervalLSpeed
             // 
-            this.textBoxIntervalLSpeed.Location = new System.Drawing.Point(91, 178);
+            this.textBoxIntervalLSpeed.Location = new System.Drawing.Point(74, 153);
             this.textBoxIntervalLSpeed.Name = "textBoxIntervalLSpeed";
             this.textBoxIntervalLSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntervalLSpeed.TabIndex = 22;
             // 
             // textBoxIntensSpeed
             // 
-            this.textBoxIntensSpeed.Location = new System.Drawing.Point(91, 176);
+            this.textBoxIntensSpeed.Location = new System.Drawing.Point(74, 151);
             this.textBoxIntensSpeed.Name = "textBoxIntensSpeed";
             this.textBoxIntensSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntensSpeed.TabIndex = 22;
@@ -326,7 +326,7 @@
             // 
             this.labelSettingTime.AutoSize = true;
             this.labelSettingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSettingTime.Location = new System.Drawing.Point(351, 9);
+            this.labelSettingTime.Location = new System.Drawing.Point(256, 9);
             this.labelSettingTime.Name = "labelSettingTime";
             this.labelSettingTime.Size = new System.Drawing.Size(256, 20);
             this.labelSettingTime.TabIndex = 36;
@@ -346,7 +346,7 @@
             // 
             this.labelIntervalLSpeed.AutoSize = true;
             this.labelIntervalLSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntervalLSpeed.Location = new System.Drawing.Point(41, 154);
+            this.labelIntervalLSpeed.Location = new System.Drawing.Point(24, 129);
             this.labelIntervalLSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntervalLSpeed.Name = "labelIntervalLSpeed";
             this.labelIntervalLSpeed.Size = new System.Drawing.Size(208, 20);
@@ -357,7 +357,7 @@
             // 
             this.labelIntensSpeed.AutoSize = true;
             this.labelIntensSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntensSpeed.Location = new System.Drawing.Point(82, 154);
+            this.labelIntensSpeed.Location = new System.Drawing.Point(64, 129);
             this.labelIntensSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntensSpeed.Name = "labelIntensSpeed";
             this.labelIntensSpeed.Size = new System.Drawing.Size(126, 20);
@@ -368,7 +368,7 @@
             // 
             this.labelIntervalRTime.AutoSize = true;
             this.labelIntervalRTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntervalRTime.Location = new System.Drawing.Point(373, 218);
+            this.labelIntervalRTime.Location = new System.Drawing.Point(268, 192);
             this.labelIntervalRTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntervalRTime.Name = "labelIntervalRTime";
             this.labelIntervalRTime.Size = new System.Drawing.Size(217, 20);
@@ -379,7 +379,7 @@
             // 
             this.labelIntensTime.AutoSize = true;
             this.labelIntensTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntensTime.Location = new System.Drawing.Point(413, 155);
+            this.labelIntensTime.Location = new System.Drawing.Point(308, 130);
             this.labelIntensTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntensTime.Name = "labelIntensTime";
             this.labelIntensTime.Size = new System.Drawing.Size(126, 20);
@@ -390,7 +390,7 @@
             // 
             this.labelIntervalLTime.AutoSize = true;
             this.labelIntervalLTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIntervalLTime.Location = new System.Drawing.Point(382, 155);
+            this.labelIntervalLTime.Location = new System.Drawing.Point(277, 130);
             this.labelIntervalLTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIntervalLTime.Name = "labelIntervalLTime";
             this.labelIntervalLTime.Size = new System.Drawing.Size(208, 20);
@@ -401,7 +401,7 @@
             // 
             this.labelTypeTime.AutoSize = true;
             this.labelTypeTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTypeTime.Location = new System.Drawing.Point(431, 43);
+            this.labelTypeTime.Location = new System.Drawing.Point(330, 29);
             this.labelTypeTime.Name = "labelTypeTime";
             this.labelTypeTime.Size = new System.Drawing.Size(97, 20);
             this.labelTypeTime.TabIndex = 43;
@@ -409,7 +409,7 @@
             // 
             // textBoxIntensTime
             // 
-            this.textBoxIntensTime.Location = new System.Drawing.Point(428, 178);
+            this.textBoxIntensTime.Location = new System.Drawing.Point(323, 153);
             this.textBoxIntensTime.Name = "textBoxIntensTime";
             this.textBoxIntensTime.Size = new System.Drawing.Size(100, 20);
             this.textBoxIntensTime.TabIndex = 44;
@@ -417,7 +417,7 @@
             // comboBoxTypeSpeed
             // 
             this.comboBoxTypeSpeed.FormattingEnabled = true;
-            this.comboBoxTypeSpeed.Location = new System.Drawing.Point(59, 69);
+            this.comboBoxTypeSpeed.Location = new System.Drawing.Point(45, 53);
             this.comboBoxTypeSpeed.Name = "comboBoxTypeSpeed";
             this.comboBoxTypeSpeed.Size = new System.Drawing.Size(160, 21);
             this.comboBoxTypeSpeed.TabIndex = 45;
@@ -427,7 +427,7 @@
             // 
             this.labelRSpeed.AutoSize = true;
             this.labelRSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRSpeed.Location = new System.Drawing.Point(41, 218);
+            this.labelRSpeed.Location = new System.Drawing.Point(24, 192);
             this.labelRSpeed.Name = "labelRSpeed";
             this.labelRSpeed.Size = new System.Drawing.Size(217, 20);
             this.labelRSpeed.TabIndex = 46;
@@ -436,7 +436,7 @@
             // comboBoxTypeTime
             // 
             this.comboBoxTypeTime.FormattingEnabled = true;
-            this.comboBoxTypeTime.Location = new System.Drawing.Point(397, 69);
+            this.comboBoxTypeTime.Location = new System.Drawing.Point(290, 53);
             this.comboBoxTypeTime.Name = "comboBoxTypeTime";
             this.comboBoxTypeTime.Size = new System.Drawing.Size(160, 21);
             this.comboBoxTypeTime.TabIndex = 47;
@@ -446,7 +446,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 328);
+            this.ClientSize = new System.Drawing.Size(519, 281);
             this.Controls.Add(this.comboBoxTypeTime);
             this.Controls.Add(this.labelRSpeed);
             this.Controls.Add(this.comboBoxTypeSpeed);
@@ -484,7 +484,7 @@
             this.Controls.Add(this.labelTypeSpeed);
             this.Controls.Add(this.menuSettings);
             this.MainMenuStrip = this.menuSettings;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OptionsForm";
             this.Text = "Параметры";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
