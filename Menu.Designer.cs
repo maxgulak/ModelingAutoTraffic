@@ -129,24 +129,12 @@
             this.numericUpDownTonnel.InterceptArrowKeys = false;
             this.numericUpDownTonnel.Location = new System.Drawing.Point(16, 119);
             this.numericUpDownTonnel.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownTonnel.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownTonnel.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
+            this.numericUpDownTonnel.Maximum = new decimal(20f);
+            this.numericUpDownTonnel.Minimum = new decimal(1f);
             this.numericUpDownTonnel.Name = "numericUpDownTonnel";
             this.numericUpDownTonnel.Size = new System.Drawing.Size(121, 20);
             this.numericUpDownTonnel.TabIndex = 23;
-            this.numericUpDownTonnel.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
+            this.numericUpDownTonnel.Value = new decimal(5f);
             // 
             // menuStrip1
             // 

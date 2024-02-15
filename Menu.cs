@@ -34,8 +34,8 @@ namespace ModelingAutoTraffic
             comboBox1.Items.AddRange(new string[] { "Автострада", "Тоннель" });
             comboBox1.SelectedItem = "Автострада";
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            numericUpDownTonnel.Minimum = 3;
-            numericUpDownTonnel.Maximum = 10;
+            numericUpDownTonnel.Minimum = 1;
+            numericUpDownTonnel.Maximum = 20;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
@@ -60,7 +60,7 @@ namespace ModelingAutoTraffic
         }
         private void оРазработчикахToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("\nЛабораторный практикум по дисциплине: \n\t«Технологии программирования» \nТема: «Система моделирования движения транспорта на автодороге (в тоннеле / на автостраде)» \n\nРазработчики:\nОбучающиеся группы 6404-090301D \n\tГулак Максим \n\tВоронцов Владислав \nРуководитель: \n\tЗеленко Лариса Сергеевна   \n\t\t\t© Самарский университет 2023",
+            MessageBox.Show("\nЛабораторный практикум по дисциплине: \n\t«Технологии программирования» \nТема: «Система моделирования движения транспорта на автодороге (в тоннеле / на автостраде)» \n\nРазработчики:\nОбучающиеся группы 6404-090301D \n\tГулак Максим \n\tВоронцов Владислав \nРуководитель: \n\tЗеленко Лариса Сергеевна",
                "Информация о разработчиках", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void оПроектеToolStripMenuItem_Click(object sender, EventArgs e)

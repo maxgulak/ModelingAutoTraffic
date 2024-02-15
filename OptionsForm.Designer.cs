@@ -93,25 +93,13 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(351, 154);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.numericUpDown1.Maximum = new decimal(10f);
+            this.numericUpDown1.Minimum = new decimal(1f);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
             this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
             this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
+            this.numericUpDown1.Value = new decimal(5f);
             // 
             // buttonOK
             // 
@@ -206,16 +194,8 @@
             this.determinateNumberSpeed.InterceptArrowKeys = false;
             this.determinateNumberSpeed.Location = new System.Drawing.Point(89, 151);
             this.determinateNumberSpeed.Margin = new System.Windows.Forms.Padding(2);
-            this.determinateNumberSpeed.Maximum = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
-            this.determinateNumberSpeed.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
+            this.determinateNumberSpeed.Maximum = new decimal(110);
+            this.determinateNumberSpeed.Minimum = new decimal(60f);
             this.determinateNumberSpeed.Name = "determinateNumberSpeed";
             this.determinateNumberSpeed.ReadOnly = true;
             this.determinateNumberSpeed.Size = new System.Drawing.Size(90, 20);

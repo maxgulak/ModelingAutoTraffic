@@ -11,33 +11,20 @@ namespace ModelingAutoTraffic
     {
         private string[] CarsIcons = new string[]
         {
-            "CarRed.ico",
-            "Gruz.ico",
-            "BusYellow.ico",
-            "Gruz2.ico"
-        };
-
-        private string[] BigCarsIcons = new string[]
-        {
-            "BigGruz.ico",
-            "BigRedCar.ico",
-            "BigBus.ico",
-            "BigGruz2.ico"
+            "car1.ico",
+            "car2.ico",
+            "car3.ico",
+            "car4.ico",
+            "car5.ico",
         };
 
         private string[] ReverseCarsIcons = new string[]
         {
-            "BikeLeft.ico",
-            "Police.ico",
-            "Tractor.ico",
-            "Mixer.ico"
-        };
-        private string[] BigReverseCarsIcons = new string[]
-        {
-            "BigTractorReverse.ico",
-            "BigMixerReverse.ico",
-            "BigBusReverse.ico",
-            "BigCarReverse.ico"
+            "reverseCar1.ico",
+            "reverseCar2.ico",
+            "reverseCar3.ico",
+            "reverseCar4.ico",
+            "reverseCar5.ico"
         };
 
         private int _speed;
@@ -92,29 +79,13 @@ namespace ModelingAutoTraffic
         {
             if (isRevers)
             {
-                if (!isBig)
-                {
-                    var index = new Random().Next(0, ReverseCarsIcons.Length);
-                    IconCar = new Icon(ReverseCarsIcons[index]);
-                }
-                else
-                {
-                    var index = new Random().Next(0, BigCarsIcons.Length);
-                    IconCar = new Icon(BigReverseCarsIcons[index]);
-                }
+                var index = new Random().Next(0, ReverseCarsIcons.Length);
+                IconCar = new Icon(ReverseCarsIcons[index]);
             }
             else
             {
-                if (!isBig)
-                {
-                    var index = new Random().Next(0, CarsIcons.Length);
-                    IconCar = new Icon(CarsIcons[index]);
-                }
-                else
-                {
-                    var index = new Random().Next(0, BigCarsIcons.Length);
-                    IconCar = new Icon(BigCarsIcons[index]);
-                }
+                var index = new Random().Next(0, CarsIcons.Length);
+                IconCar = new Icon(CarsIcons[index]);
             }
         }
     }

@@ -60,16 +60,10 @@ namespace ModelingAutoTraffic
 
 
         private const int OFFSET_MOUSE_POSTION = 70;
-
  
         private Point _pointUpSignum;
 
-
         private Point _pointDownSignum;
-
- 
-        private bool _isBigCars = false;
-
  
         private List<(System.Windows.Forms.Label, Car)> _timersAppearsCar;
 
@@ -120,13 +114,13 @@ namespace ModelingAutoTraffic
             _typeTransport = new TransportSettingModel()
             {
                 IsDeterminate = true,
-                DeterminateInterval = 3,
+                DeterminateInterval = 2,
                 IsRandom = false
             };
             _speedTransport = new TransportSettingModel()
             {
                 IsDeterminate = true,
-                DeterminateInterval = 30,
+                DeterminateInterval = 80,
                 IsRandom = false
             };
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -237,26 +231,10 @@ namespace ModelingAutoTraffic
         }
 
         */
+
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            timer.Tick -= new EventHandler(timer1_FirstTick);
-            timer.Tick -= new EventHandler(timer1_SecondTick);
-            trigger = false;
-            timer.Stop();
-            x = 0;
-            x1 = -wid;
-            y = 0;
-            y1 = 0;
-            speed_x = 3;
-            speed_x1 = 4;
-            timerTrafficLight.Tick -= new EventHandler(StopCars);
-            timerUpLigth.Tick -= new EventHandler(timerUpLigthTick);
-            timerUpLigth.Stop();
-
-            timerDownLigth.Tick -= new EventHandler(timerDownLigthTick);
-            timerDownLigth.Stop();
-
-            this.Refresh();
+            this.Close();
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -818,7 +796,7 @@ namespace ModelingAutoTraffic
                 speed = 3f;
             }
 
-            var car = new Car(wid, false, _isBigCars);
+            var car = new Car(wid, false);
             car.start_y = y;
             car.cur_y = y;
             car.speed = (int)speed;
@@ -832,7 +810,7 @@ namespace ModelingAutoTraffic
                 }
                 car.start_x = coordX;
                 car.cur_x = coordX;
-                car.SetIcon(false, _isBigCars);
+                car.SetIcon(false);
 
                 if (_cars[index].Last().goal_x != 10_000)
                 {
@@ -850,7 +828,7 @@ namespace ModelingAutoTraffic
                 car.start_x = coordX;
                 car.cur_x = coordX;
                 car.goal_x *= -1;
-                car.SetIcon(true, _isBigCars);
+                car.SetIcon(true);
 
                 if (_reverseCars[index].Last().goal_x != -10_000)
                 {
@@ -906,48 +884,6 @@ namespace ModelingAutoTraffic
             Controls.Add(_timerDownTonnel);
         }
 
-
-
-
-        //Новая версия таймера светофора
-
-        private DateTime _lastUpdateTime = DateTime.Now;
-
-        private void timerUpLigthTick(object sender, EventArgs e)
-        {
-            TimeSpan elapsedTime = DateTime.Now - _lastUpdateTime;
-            _timerUpTonnelValue -= (float)elapsedTime.TotalSeconds;
-
-            if (_timerUpTonnelValue <= 0)
-            {
-                _timerUpTonnelValue = TimeTrafficLight; // Сброс времени при достижении нуля
-                _timerDownTonnelValue = 0; // Сброс времени нижнего светофора
-            }
-
-            _timerUpTonnel.Text = $"{Math.Max(0, Math.Round(_timerUpTonnelValue, 1))}"; // Отображение времени
-
-            _lastUpdateTime = DateTime.Now;
-        }
-
-        private void timerDownLigthTick(object sender, EventArgs e)
-        {
-            TimeSpan elapsedTime = DateTime.Now - _lastUpdateTime;
-            _timerDownTonnelValue -= (float)elapsedTime.TotalSeconds;
-
-            if (_timerDownTonnelValue <= 0)
-            {
-                _timerDownTonnelValue = TimeTrafficLight; // Сброс времени при достижении нуля
-                _timerUpTonnelValue = 0; // Сброс времени верхнего светофора
-            }
-
-            _timerDownTonnel.Text = $"{Math.Max(0, Math.Round(_timerDownTonnelValue, 1))}"; // Отображение времени
-
-            _lastUpdateTime = DateTime.Now;
-        }
-
-
-        /*
-      
         /// <summary>
         /// Обработчик тиков верхнего таймера.
         /// </summary>
@@ -986,9 +922,6 @@ namespace ModelingAutoTraffic
             _timerDownTonnel.Text = $"{Math.Round(_timerDownTonnelValue, 1)}";
         }
 
-
-        */
-
         private void PaintRoad()
         {
             Menu form1 = new Menu();
@@ -1025,9 +958,6 @@ namespace ModelingAutoTraffic
                         g.DrawLine(pen, 0, pictureBox1.Height, pictureBox1.Width, pictureBox1.Height);
                         for (int i = 1; i < lines * CountWays; i++)
                         {
-                            if(CountWays > 1 && lines == 1)
-                                _isBigCars = true;
-
                             if (CountWays > 1 && i == lines)
                             {
                                 firstCoord = (i * pictureBox1.Height / (lines * CountWays)) - 5;
@@ -1049,7 +979,6 @@ namespace ModelingAutoTraffic
 
                         if (CountWays == 1)
                         {
-                            _isBigCars = true;
                             offset++;
                             CountLines++;
                             offsetPositionY -= 60;
@@ -1069,7 +998,6 @@ namespace ModelingAutoTraffic
                         CountLines = 1;
                         wid = ((pictureBox1.Height / (CountLines * CountWays)) - 20);
                         isTonnel = true;
-                        _isBigCars = true;
 
                         g.FillRectangle(Brushes.Gray, new Rectangle((wid * 2), 0, pictureBox1.Width - (wid * 4), wid / 4));
                         g.FillRectangle(Brushes.LightGray, new Rectangle((wid * 2), wid / 4, pictureBox1.Width - (wid * 4), pictureBox1.Height - (wid / 2)));
@@ -1135,15 +1063,15 @@ namespace ModelingAutoTraffic
                         coordYReverse = (pictureBox1.Height - 130);
                     }
 
-                    var textBox = new System.Windows.Forms.Label();
-                    textBox.Text = "timer";
+                    var textBox = new Label();
+                    textBox.Text = "";
                     textBox.Location = new Point(POSITION_X_TIMER_CARS, coordYTimer + offsetUpTimer);
                     Controls.Add(textBox);
                     _timersAppearsCar.Add((textBox, null));
 
                     _cars.Add(new List<Car>());
 
-                    var car = new Car(wid, false, _isBigCars);
+                    var car = new Car(wid, false);
                     car.start_x = -wid;
                     car.cur_x = -wid;
                     car.start_y = coordY;
@@ -1159,7 +1087,7 @@ namespace ModelingAutoTraffic
                     }
 
                     var timerTextBox = new System.Windows.Forms.Label();
-                    timerTextBox.Text = "timer";
+                    timerTextBox.Text = "";
                     timerTextBox.Location = new Point(POSITION_X_TIMER_REVERSE_CARS, coordYReverseTimer + offsetDownTimer);
                     Controls.Add(timerTextBox);
                     timerTextBox.BringToFront();
@@ -1167,7 +1095,7 @@ namespace ModelingAutoTraffic
 
                     _reverseCars.Add(new List<Car>());
 
-                    var reverseCar = new Car(wid, true, _isBigCars);
+                    var reverseCar = new Car(wid, true);
                     reverseCar.start_x = wid + 890 + (i * 100);
                     reverseCar.cur_x = wid + 890 + (i * 100);
                     reverseCar.start_y = coordYReverse;
