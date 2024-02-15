@@ -88,6 +88,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\ModelingAutoTraffic.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,6 +101,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\100.png" />
+    <Content Include="bin\Debug\40.png" />
+    <Content Include="bin\Debug\60.png" />
+    <Content Include="bin\Debug\80.png" />
+    <Content Include="bin\Debug\car1.ico" />
+    <Content Include="bin\Debug\car2.ico" />
+    <Content Include="bin\Debug\car3.ico" />
+    <Content Include="bin\Debug\car4.ico" />
+    <Content Include="bin\Debug\car5.ico" />
+    <Content Include="bin\Debug\ModelingAutoTraffic.exe" />
+    <Content Include="bin\Debug\ModelingAutoTraffic.pdb" />
+    <Content Include="bin\Debug\Pause.png" />
+    <Content Include="bin\Debug\reverseCar1.ico" />
+    <Content Include="bin\Debug\reverseCar2.ico" />
+    <Content Include="bin\Debug\reverseCar3.ico" />
+    <Content Include="bin\Debug\reverseCar4.ico" />
+    <Content Include="bin\Debug\reverseCar5.ico" />
+    <Content Include="bin\Debug\Start.png" />
+    <Content Include="bin\Debug\Stop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
