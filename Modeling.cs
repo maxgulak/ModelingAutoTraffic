@@ -149,45 +149,6 @@ namespace ModelingAutoTraffic
             sett_form.ShowDialog();
         }
 
-        //Новая реализация "старт"  и "стоп"
-        private void buttonPause_Click(object sender, EventArgs e)
-        {
-            _isStopped = true;
-
-            // Остановить все таймеры
-            timer.Stop();
-            timerUpLigth.Stop();
-            timerDownLigth.Stop();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!DesignMode && !trigger)
-            {
-                timer.Interval = 30;
-                timer.Tick += new EventHandler(timer1_FirstTick);
-                timer.Tick += new EventHandler(timer1_SecondTick);
-
-                if (isTonnel)
-                {
-                    timerUpLigth.Interval = 10;
-                    timerUpLigth.Tick += new EventHandler(timerUpLigthTick);
-
-                    timerDownLigth.Interval = 10;
-                    timerDownLigth.Tick += new EventHandler(timerDownLigthTick);
-                }
-
-                // Запустить все таймеры
-                timer.Start();
-                timerUpLigth.Start();
-                timerDownLigth.Start();
-            }
-            trigger = true;
-            _isStopped = false;
-        }
-
-
-        /*
         private void button1_Click(object sender, EventArgs e)
         {
             if (!DesignMode && !trigger)
@@ -229,8 +190,6 @@ namespace ModelingAutoTraffic
             timerDownLigth.Tick -= new EventHandler(timerDownLigthTick);
             timerDownLigth.Stop();
         }
-
-        */
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
@@ -449,7 +408,7 @@ namespace ModelingAutoTraffic
         {
             var pictureBox = (PictureBox)sender;
 
-            pictureBox.BackgroundImage = _currentSignumSpeed?.ImageSignum;//Image.FromFile("100.png");
+            pictureBox.BackgroundImage = _currentSignumSpeed?.ImageSignum;
             pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private void PictureSpeedLimitMouseLeave(object sender, EventArgs e)
@@ -910,7 +869,7 @@ namespace ModelingAutoTraffic
         /// <param name="e"></param>
         private void timerDownLigthTick(object sender, EventArgs e)
         {
-            _timerDownTonnelValue -= 0.0015f;
+            _timerDownTonnelValue -= 0.015f;
 
             if (_timerDownTonnelValue < 0)
             {
@@ -1011,7 +970,7 @@ namespace ModelingAutoTraffic
                         g.DrawLine(p1, 0, secondCoord, pictureBox1.Width - 1, secondCoord);
 
                         timerTrafficLight.Interval = (TimeTrafficLight == 0)
-                            ? 3_000
+                            ? 3
                             : TimeTrafficLight * 1000;
                         timerTrafficLight.Tick += new EventHandler(StopCars);
                         timerTrafficLight.Start();
