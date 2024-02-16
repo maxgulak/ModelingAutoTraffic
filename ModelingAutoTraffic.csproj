@@ -122,6 +122,7 @@
     <Content Include="bin\Debug\reverseCar5.ico" />
     <Content Include="bin\Debug\Start.png" />
     <Content Include="bin\Debug\Stop.png" />
+    <Content Include="О системе.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
