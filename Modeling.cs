@@ -999,11 +999,27 @@ namespace ModelingAutoTraffic
 
                 for (int i = 0; i < CountLines - offset; i++)
                 {
-                    var coordYReverse = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
-                    var coordY = ((i + offset) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
+                    var coordYReverse = 0;
+                    var coordY = 0;
+                    var coordYReverseTimer = 0;
+                    var coordYTimer = 0;
 
-                    var coordYReverseTimer = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
-                    var coordYTimer = ((i + 1) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
+                    if (CountLines == 3)
+                    {
+                        coordYReverse = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
+                        coordY = ((i + offset) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
+
+                        coordYReverseTimer = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
+                        coordYTimer = ((i + 1) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
+                    }
+                    else
+                    {
+                        coordYReverse = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
+                        coordY = ((i + offset) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
+
+                        coordYReverseTimer = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
+                        coordYTimer = ((i + 1) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
+                    }
 
                     var offsetUpTimer = (CountWays == 1)
                         ? 100
