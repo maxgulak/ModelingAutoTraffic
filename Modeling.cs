@@ -286,7 +286,7 @@ namespace ModelingAutoTraffic
 
         private void PictureSpeedLimitFirstPaint(object sender, PaintEventArgs e)
         {
-            var nameSign = "40.png";
+            var nameSign = "60.png";
 
             if (roadType != "Тоннель")
             {
@@ -302,8 +302,8 @@ namespace ModelingAutoTraffic
             timerSignum.Tick += new EventHandler(TimerSignumTick);
             timerSignum.Start();
 
-            var nameSign = "40.png";
-            var speedSign = 40;
+            var nameSign = "60.png";
+            var speedSign = 60;
 
             _currentSignumSpeed = new SignumSpeed()
             {
@@ -314,7 +314,7 @@ namespace ModelingAutoTraffic
 
         private void PictureSpeedLimitSecondPaint(object sender, PaintEventArgs e)
         {
-            var nameSign = "60.png";
+            var nameSign = "70.png";
             if (roadType != "Тоннель")
             {
                 e.Graphics.DrawImage(Image.FromFile(nameSign), 0, 0, 40, 40);
@@ -327,8 +327,8 @@ namespace ModelingAutoTraffic
             timerSignum.Tick += new EventHandler(TimerSignumTick);
             timerSignum.Start();
 
-            var nameSign = "60.png";
-            var speedSign = 60;
+            var nameSign = "70.png";
+            var speedSign = 70;
 
             _currentSignumSpeed = new SignumSpeed()
             {
@@ -365,7 +365,7 @@ namespace ModelingAutoTraffic
         }
         private void PictureSpeedLimitFourthPaint(object sender, PaintEventArgs e)
         {
-            var nameSign = "100.png";
+            var nameSign = "90.png";
 
             if (roadType != "Тоннель")
             {
@@ -380,6 +380,33 @@ namespace ModelingAutoTraffic
             timerSignum.Tick += new EventHandler(TimerSignumTick);
             timerSignum.Start();
 
+            var nameSign = "90.png";
+            var speedSign = 90;
+
+            _currentSignumSpeed = new SignumSpeed()
+            {
+                ImageSignum = Image.FromFile(nameSign),
+                Speed = speedSign
+            };
+        }
+
+        private void PictureSpeedLimitFifthPaint(object sender, PaintEventArgs e)
+        {
+            var nameSign = "100.png";
+
+            if (roadType != "Тоннель")
+            {
+                e.Graphics.DrawImage(Image.FromFile(nameSign), 0, 0, 40, 40);
+            }
+
+            base.OnPaint(e);
+        }
+        private void pictureSpeedLimitFirstFifth_Click(object sender, EventArgs e)
+        {
+            timerSignum.Interval = 30;
+            timerSignum.Tick += new EventHandler(TimerSignumTick);
+            timerSignum.Start();
+
             var nameSign = "100.png";
             var speedSign = 100;
 
@@ -389,7 +416,6 @@ namespace ModelingAutoTraffic
                 Speed = speedSign
             };
         }
-
         private void PictureSpeedLimitMouseClick(object sender, EventArgs e)
         {
             var pictureBox = (PictureBox)sender;
