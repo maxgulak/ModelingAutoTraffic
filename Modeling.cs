@@ -241,29 +241,47 @@ namespace ModelingAutoTraffic
             var rigthLocationX = globalMouse.X - controlPosition.X - 15;
             var rigthLocationY = globalMouse.Y - controlPosition.Y - 35;
 
-            if (rigthLocationY < 200)
+            if (CountWays == 1)
             {
-                pictureBox = this.Controls[NAME_UP_SIGNUM] as PictureBox;
+                pictureBox = Controls[NAME_UP_SIGNUM] as PictureBox;
 
-                var picture = this.Controls[NAME_DOWN_SIGNUM] as PictureBox;
-                picture.Location = _pointDownSignum;
+                if (rigthLocationX < 70 || rigthLocationX > pictureBox1.Width + 20)
+                {
+                    rigthLocationX = pictureBox.Location.X;
+                }
+
+                pictureBox.Location = new Point(rigthLocationX, pictureBox.Location.Y);
+                pictureBox.BackgroundImage = _currentSignumSpeed?.ImageSignum;
+                pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
+                Refresh();
             }
             else
             {
-                pictureBox = this.Controls[NAME_DOWN_SIGNUM] as PictureBox;
+                if (rigthLocationY < 200)
+                {
+                    pictureBox = Controls[NAME_UP_SIGNUM] as PictureBox;
 
-                var picture = this.Controls[NAME_UP_SIGNUM] as PictureBox;
-                picture.Location = _pointUpSignum;
+                    var picture = Controls[NAME_DOWN_SIGNUM] as PictureBox;
+                    picture.Location = _pointDownSignum;
+                }
+                else
+                {
+                    pictureBox = Controls[NAME_DOWN_SIGNUM] as PictureBox;
+
+                    var picture = Controls[NAME_UP_SIGNUM] as PictureBox;
+                    picture.Location = _pointUpSignum;
+                }
+
+                if (rigthLocationX < 70 || rigthLocationX > pictureBox1.Width + 20)
+                {
+                    rigthLocationX = pictureBox.Location.X;
+                }
+
+                pictureBox.Location = new Point(rigthLocationX, pictureBox.Location.Y);
+                pictureBox.BackgroundImage = _currentSignumSpeed?.ImageSignum;
+                pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
+                Refresh();
             }
-
-            if (rigthLocationX < 70 || rigthLocationX > pictureBox1.Width + 20)
-            {
-                rigthLocationX = pictureBox.Location.X;
-            }
-
-            pictureBox.Location = new Point(rigthLocationX, pictureBox.Location.Y);
-
-            this.Refresh();
         }
 
         private void PictureSpeedLimitFirstPaint(object sender, PaintEventArgs e)
@@ -376,15 +394,26 @@ namespace ModelingAutoTraffic
         {
             var pictureBox = (PictureBox)sender;
 
-            if (pictureBox.Name == NAME_UP_SIGNUM)
+            if (CountWays == 1)
             {
-                _lastUpImageSignumSpeed = _currentSignumSpeed;
-                _pointUpSignum = pictureBox.Location;
+                if (pictureBox.Name == NAME_UP_SIGNUM)
+                {
+                    _lastUpImageSignumSpeed = _currentSignumSpeed;
+                    _pointUpSignum = pictureBox.Location;
+                }
             }
             else
             {
-                _lastDownImageSignumSpeed = _currentSignumSpeed;
-                _pointDownSignum = pictureBox.Location;
+                if (pictureBox.Name == NAME_UP_SIGNUM)
+                {
+                    _lastUpImageSignumSpeed = _currentSignumSpeed;
+                    _pointUpSignum = pictureBox.Location;
+                }
+                if (pictureBox.Name == NAME_DOWN_SIGNUM)
+                {
+                    _lastDownImageSignumSpeed = _currentSignumSpeed;
+                    _pointDownSignum = pictureBox.Location;
+                }
             }
 
             timerSignum.Tick -= new EventHandler(TimerSignumTick);
@@ -404,24 +433,6 @@ namespace ModelingAutoTraffic
                 pictureBox.BackgroundImage = null;
             }
         }
-        private void PictureSpeedLimitMouseEnter(object sender, EventArgs e)
-        {
-            var pictureBox = (PictureBox)sender;
-
-            pictureBox.BackgroundImage = _currentSignumSpeed?.ImageSignum;
-            pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
-        }
-        private void PictureSpeedLimitMouseLeave(object sender, EventArgs e)
-        {
-            var pictureBox = (PictureBox)sender;
-
-            pictureBox.BackgroundImage = (pictureBox.Name == NAME_UP_SIGNUM)
-                ? _lastUpImageSignumSpeed?.ImageSignum
-                : _lastDownImageSignumSpeed?.ImageSignum;
-
-            pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
-        }
-
 
         private void SetUpTimers()
         {
@@ -816,9 +827,7 @@ namespace ModelingAutoTraffic
             var picture = new PictureBox();
             picture.Name = name;
             picture.Size = new Size(32, 32);
-            picture.Location = new Point(x, y);//(pictureBox1.Width / 2, 60);
-            picture.MouseEnter += PictureSpeedLimitMouseEnter;
-            picture.MouseLeave += PictureSpeedLimitMouseLeave;
+            picture.Location = new Point(x, y);
             picture.MouseClick += PictureSpeedLimitMouseClick;
             picture.MouseDoubleClick += PictureSpeedLimitMouseDoubleClick;
             picture.BackgroundImageLayout = ImageLayout.Stretch;
