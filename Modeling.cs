@@ -1,12 +1,8 @@
-﻿using ModelingAutoTraffic.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ModelingAutoTraffic
@@ -86,6 +82,9 @@ namespace ModelingAutoTraffic
 
 
         private float _timerDownTonnelValue;
+
+        Font speedFont = new Font("Microsoft Comic Sans", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
+
 
         public string setRoaType
         {
@@ -210,7 +209,7 @@ namespace ModelingAutoTraffic
                         {
                             e.Graphics.DrawIcon(item.IconCar, item.cur_x, item.cur_y);
 
-                            e.Graphics.DrawString($"{item.speed * 10}", Font, Brushes.White, item.cur_x + 15, item.cur_y);
+                            e.Graphics.DrawString($"{item.speed * 10}", speedFont, Brushes.Yellow, item.cur_x + 15, item.cur_y);
                         }
                     }
                     for (int j = 0; j < _reverseCars.Count; j++)
@@ -219,7 +218,7 @@ namespace ModelingAutoTraffic
                         {
                             e.Graphics.DrawIcon(item.IconCar, item.cur_x, item.cur_y);
 
-                            e.Graphics.DrawString($"{item.speed * 10}", Font, Brushes.White, item.cur_x, item.cur_y);
+                            e.Graphics.DrawString($"{item.speed * 10}", speedFont, Brushes.Yellow, item.cur_x, item.cur_y);
                         }
                     }
                     if (x >= pictureBox1.Width / 8 || count > 0)

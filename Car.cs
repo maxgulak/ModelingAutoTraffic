@@ -7,20 +7,12 @@ namespace ModelingAutoTraffic
     {
         private string[] CarsIcons = new string[]
         {
-            "car1.ico",
-            "car2.ico",
-            "car3.ico",
-            "car4.ico",
-            "car5.ico",
+            "car1.ico", "car2.ico", "car3.ico", "car4.ico", "car5.ico"
         };
 
         private string[] ReverseCarsIcons = new string[]
         {
-            "reverseCar1.ico",
-            "reverseCar2.ico",
-            "reverseCar3.ico",
-            "reverseCar4.ico",
-            "reverseCar5.ico"
+            "reverseCar1.ico", "reverseCar2.ico", "reverseCar3.ico", "reverseCar4.ico", "reverseCar5.ico"
         };
 
         private int _speed;
@@ -51,27 +43,27 @@ namespace ModelingAutoTraffic
 
         public Car()
         {
-            this.speed = new Random().Next(30, 60);
+            speed = new Random().Next(30, 60);
             goal_x = 10_000;
         }
 
-        public Car(int size_num, bool isRevers, bool isBig = false)
+        public Car(int size_num, bool isRevers)
         {
-            this.size = size_num;
-            this.speed = new Random().Next(0, 30);
+            size = size_num;
+            speed = new Random().Next(0, 30);
             goal_x = 10000;
 
-            SetIcon(isRevers, isBig);
+            SetIcon(isRevers);
         }
 
         public Car(int speed_num, int size_num)
         {
-            this.speed = speed_num;
-            this.size = size_num;
+            speed = speed_num;
+            size = size_num;
             goal_x = 10000;
         }
 
-        public void SetIcon(bool isRevers, bool isBig = false)
+        public void SetIcon(bool isRevers)
         {
             if (isRevers)
             {
