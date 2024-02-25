@@ -64,10 +64,9 @@ namespace ModelingAutoTraffic
         private List<(System.Windows.Forms.Label, Car)> _timersAppearsCar;
 
   
-        private const int POSITION_X_TIMER_CARS = 10;
-
+        private const int POSITION_X_TIMER_CARS = 30;
      
-        private const int POSITION_X_TIMER_REVERSE_CARS = 730;
+        private const int POSITION_X_TIMER_REVERSE_CARS = 1050;
 
         private List<(System.Windows.Forms.Label, Car)> _timersAppearsReverseCar;
 
@@ -135,8 +134,8 @@ namespace ModelingAutoTraffic
 
         private void Modeling_Load(object sender, EventArgs e)
         {
-            _timersAppearsCar = new List<(System.Windows.Forms.Label, Car)>();
-            _timersAppearsReverseCar = new List<(System.Windows.Forms.Label, Car)>();
+            _timersAppearsCar = new List<(Label, Car)>();
+            _timersAppearsReverseCar = new List<(Label, Car)>();
 
             PaintRoad();
         }
@@ -198,7 +197,7 @@ namespace ModelingAutoTraffic
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             wid = ((pictureBox1.Height / (CountLines * CountWays)) - 20);
-            if (!this.DesignMode)
+            if (!DesignMode)
             {
                 g = e.Graphics;
                 if (trigger)
@@ -645,7 +644,7 @@ namespace ModelingAutoTraffic
                 _cars[0][i].goal_x = 10_000;
             }
             // Останавливаем нижний поток
-            var centerX = 425;
+            var centerX = pictureBox1.Width - 150;
 
             for (int i = 0; i < _reverseCars[0].Count; i++)
             {
@@ -677,7 +676,7 @@ namespace ModelingAutoTraffic
                 _reverseCars[0][i].goal_x = -10_000;
             }
             // Останавливаем верхний поток
-            var centerX = 175;
+            var centerX = 85;
 
             for (int i = 0; i < _cars[0].Count; i++)
             {
@@ -709,20 +708,20 @@ namespace ModelingAutoTraffic
             // Останавливаем нижний поток машин.
             if (isReverseStopped)
             {
-                g.FillEllipse(Brushes.Red, 234, 5, 17, 17);
-                g.FillEllipse(Brushes.Gray, 234, 23, 17, 17);
+                g.FillEllipse(Brushes.Red, 150, 5, 17, 17);
+                g.FillEllipse(Brushes.Gray, 150, 23, 17, 17);
 
-                g.FillEllipse(Brushes.Gray, 404, 275, 17, 17);
-                g.FillEllipse(Brushes.Green, 404, 293, 17, 17);
+                g.FillEllipse(Brushes.Gray, pictureBox1.Width - 170, pictureBox1.Height - 40, 17, 17);
+                g.FillEllipse(Brushes.Green, pictureBox1.Width - 170, pictureBox1.Height - 22, 17, 17);
             }
             // Останавливаем верхний поток машин.
             else
             {
-                g.FillEllipse(Brushes.Gray, 234, 5, 17, 17);
-                g.FillEllipse(Brushes.Green, 234, 23, 17, 17);
+                g.FillEllipse(Brushes.Gray, 150, 5, 17, 17);
+                g.FillEllipse(Brushes.Green, 150, 23, 17, 17);
 
-                g.FillEllipse(Brushes.Red, 404, 275, 17, 17);
-                g.FillEllipse(Brushes.Gray, 404, 293, 17, 17);
+                g.FillEllipse(Brushes.Red, pictureBox1.Width - 170, pictureBox1.Height - 40, 17, 17);
+                g.FillEllipse(Brushes.Gray, pictureBox1.Width - 170, pictureBox1.Height - 22, 17, 17);
             }
         }
 
@@ -865,13 +864,13 @@ namespace ModelingAutoTraffic
         /// </summary>
         private void SetTimerLight()
         {
-            _timerUpTonnel = new System.Windows.Forms.Label();
+            _timerUpTonnel = new Label();
             _timerUpTonnel.Text = "0";
-            _timerUpTonnel.Location = new Point(290, 35);
+            _timerUpTonnel.Location = new Point(210, 60);
 
-            _timerDownTonnel = new System.Windows.Forms.Label();
+            _timerDownTonnel = new Label();
             _timerDownTonnel.Text = "0";
-            _timerDownTonnel.Location = new Point(460, 370);
+            _timerDownTonnel.Location = new Point(865, 580);
 
             Controls.Add(_timerUpTonnel);
             Controls.Add(_timerDownTonnel);
@@ -920,13 +919,9 @@ namespace ModelingAutoTraffic
             Menu form1 = new Menu();
             pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
 
-            var offset = 0;
-            var offsetPositionY = 0;
-
             using (g = Graphics.FromImage(pictureBox1.Image))
             {
                 g.Clear(Color.Black);
-                int lines = CountLines;
                 var firstCoord = 0;
                 var secondCoord = 0;
                 Pen p1 = new Pen(Color.White, 4);
@@ -938,8 +933,8 @@ namespace ModelingAutoTraffic
                         pictureSpeedLimitThird.Visible = true;
                         pictureSpeedLimitFourth.Visible = true;
 
-                        SetSignum(pictureBox1.Width / 2, 35, NAME_UP_SIGNUM);
-                        SetSignum(pictureBox1.Width / 2, 360, NAME_DOWN_SIGNUM);
+                        SetSignum(pictureBox1.Location.X, 60, NAME_UP_SIGNUM); 
+                        SetSignum(pictureBox1.Location.X, 560, NAME_DOWN_SIGNUM);
 
                         _minSpeed = MIN_SPEED_CITY;
                         _maxSpeed = MAX_SPEED_CITY;
@@ -949,12 +944,12 @@ namespace ModelingAutoTraffic
                         p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
                         g.DrawLine(pen, 0, 0, pictureBox1.Width, 0);
                         g.DrawLine(pen, 0, pictureBox1.Height, pictureBox1.Width, pictureBox1.Height);
-                        for (int i = 1; i < lines * CountWays; i++)
+                        for (int i = 1; i < CountLines * CountWays; i++)
                         {
-                            if (CountWays > 1 && i == lines)
+                            if (CountWays > 1 && i == CountLines)
                             {
-                                firstCoord = (i * pictureBox1.Height / (lines * CountWays)) - 5;
-                                secondCoord = (i * pictureBox1.Height / (lines * CountWays)) + 5;
+                                firstCoord = (i * pictureBox1.Height / (CountLines * CountWays)) - 5;
+                                secondCoord = (i * pictureBox1.Height / (CountLines * CountWays)) + 5;
 
                                 g.DrawLine(p1, 0, firstCoord, pictureBox1.Width - 1, firstCoord);
                                 g.DrawLine(p1, 0, secondCoord, pictureBox1.Width - 1, secondCoord);
@@ -964,19 +959,12 @@ namespace ModelingAutoTraffic
                             {
                                 for (int j = 1; j < 10; j++)
                                 {
-                                    firstCoord = (i * pictureBox1.Height / (lines * CountWays)) - 5;
+                                    firstCoord = (i * pictureBox1.Height / (CountLines * CountWays)) - 5;
                                     g.DrawLine(p, 0, firstCoord, (pictureBox1.Width / 9) * j, firstCoord);
                                 }
                             }
                         }
 
-                        if (CountWays == 1)
-                        {
-                            offset++;
-                            CountLines++;
-                            offsetPositionY -= 60;
-                        }
-                     
                         break;
                     case "Тоннель":
                         pictureSpeedLimitFirst.Visible = false;
@@ -989,15 +977,13 @@ namespace ModelingAutoTraffic
 
                         CountWays = 2;
                         CountLines = 1;
-                        wid = ((pictureBox1.Height / (CountLines * CountWays)) - 20);
+                        wid = pictureBox1.Height / CountLines / CountWays - 20;
                         isTonnel = true;
 
-                        g.FillRectangle(Brushes.Gray, new Rectangle((wid * 2), 0, pictureBox1.Width - (wid * 4), wid / 4));
-                        g.FillRectangle(Brushes.LightGray, new Rectangle((wid * 2), wid / 4, pictureBox1.Width - (wid * 4), pictureBox1.Height - (wid / 2)));
-                        g.FillRectangle(Brushes.Gray, new Rectangle((wid * 2), pictureBox1.Height - (wid / 4), pictureBox1.Width - (wid * 4), wid / 4));
+                        g.FillRectangle(Brushes.Gray, new Rectangle(175, 0, pictureBox1.Width - (175 * 2), wid / 4));  // Тоннель
+                        g.FillRectangle(Brushes.LightGray, new Rectangle(175, wid / 4, pictureBox1.Width - (175 * 2), pictureBox1.Height - (wid / 2)));
+                        g.FillRectangle(Brushes.Gray, new Rectangle(175, pictureBox1.Height - (wid / 4), pictureBox1.Width - (175 * 2), wid / 4));
 
-                        g.FillRectangle(Brushes.Gray, new Rectangle(230, 0, 20, 40));
-                        g.FillRectangle(Brushes.Gray, new Rectangle(400, 270, 20, 40));
                         firstCoord = (pictureBox1.Height / 2) - 5;
                         secondCoord = (pictureBox1.Height / 2) + 5;
                         g.DrawLine(p1, 0, firstCoord, pictureBox1.Width - 1, firstCoord);
@@ -1020,10 +1006,7 @@ namespace ModelingAutoTraffic
                         SetColorLights(g);
                         SetTimerLight();
                         break;
-                    default:
-                        break;
                 }
-
             }
 
             if (!_isStopped)
@@ -1031,50 +1014,98 @@ namespace ModelingAutoTraffic
                 _reverseCars = new List<List<Car>>();
                 _cars = new List<List<Car>>();
 
-                for (int i = 0; i < CountLines - offset; i++)
+                var offsetPositionY = pictureBox1.Height / CountWays / CountLines / 2;
+
+                for (int i = 0; i < CountLines; i++)
                 {
                     var coordYReverse = 0;
                     var coordY = 0;
-                    var coordYReverseTimer = 0;
-                    var coordYTimer = 0;
+                    var timerOffset = pictureBox1.Location.Y + 25;
 
-                    if (CountLines == 3)
+                    switch (roadType)
                     {
-                        coordYReverse = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
-                        coordY = ((i + offset) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
+                        case "Автострада":
+                            if (CountWays == 1)
+                            {
+                                switch (CountLines)
+                                {
+                                    case 1:
+                                        if (i == 0)
+                                            coordY = 200;
+                                        break;
 
-                        coordYReverseTimer = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
-                        coordYTimer = ((i + 1) * pictureBox1.Height / (CountLines * CountWays)) - 10 + offsetPositionY;
+                                    case 2:
+                                        if (i == 0)
+                                            coordY = 100;
+                                        else if (i == 1)
+                                            coordY = 325;
+                                        break;
+
+                                    case 3:
+                                        if (i == 0)
+                                            coordY = 50;
+                                        else if (i == 1)
+                                            coordY = 225;
+                                        else if (i == 2)
+                                            coordY = 375;
+                                        break;
+                                }
+                            }    
+                            else
+                            {
+                                switch (CountLines)
+                                {
+                                    case 1:
+                                        if (i == 0)
+                                        {
+                                            coordY = 100;
+                                            coordYReverse = 325;
+                                        }
+                                        break;
+
+                                    case 2:
+                                        if (i == 0)
+                                        {
+                                            coordY = 40;
+                                            coordYReverse = 275;
+                                        }
+                                        else if (i == 1)
+                                        {
+                                            coordY = 150;
+                                            coordYReverse = 400;
+                                        }
+                                        break;
+
+                                    case 3:
+                                        if (i == 0)
+                                        {
+                                            coordY = 15;
+                                            coordYReverse = 255;
+                                        }
+                                        else if (i == 1)
+                                        {
+                                            coordY = 90;
+                                            coordYReverse = 330;
+                                        }
+                                        else if (i == 2)
+                                        {
+                                            coordY = 160;
+                                            coordYReverse = 415;
+                                        }
+                                        break;
+                                }
+                            }
+                            break;
+
+                        case "Тоннель":
+                            coordY = pictureBox1.Height / 2 - 150;
+                            coordYReverse = pictureBox1.Height - 150;
+                            break;
                     }
-                    else
-                    {
-                        coordYReverse = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
-                        coordY = ((i + offset) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
-
-                        coordYReverseTimer = ((i + CountLines) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
-                        coordYTimer = ((i + 1) * pictureBox1.Height / (CountLines * CountWays)) + 5 + offsetPositionY;
-                    }
-
-                    var offsetUpTimer = (CountWays == 1)
-                        ? 100
-                        : 20;
-
-                    offsetUpTimer = (roadType == "загород")
-                        ? 50
-                        : offsetUpTimer;
-
-                    var offsetDownTimer = 70;
-
-                    //если тоннель, устанавливаем Y коорд верхнего потока машин (размещение верхнего потока машин)
-                    if (isTonnel)
-                    {
-                        coordY = (pictureBox1.Height / 2) - 120;
-                        coordYReverse = (pictureBox1.Height - 130);
-                    }
-
+                    
                     var textBox = new Label();
                     textBox.Text = "";
-                    textBox.Location = new Point(POSITION_X_TIMER_CARS, coordYTimer + offsetUpTimer);
+                    textBox.Location = new Point(POSITION_X_TIMER_CARS, timerOffset + coordY);
                     Controls.Add(textBox);
                     _timersAppearsCar.Add((textBox, null));
 
@@ -1085,7 +1116,7 @@ namespace ModelingAutoTraffic
                     car.cur_x = -wid;
                     car.start_y = coordY;
                     car.cur_y = coordY;
-                    car.speed = GetRandomSpeed();// new Random().Next(_minSpeed, _maxSpeed);
+                    car.speed = GetRandomSpeed();
                     car.isGenerate = false;
 
                     _cars[i].Add(car);
@@ -1095,9 +1126,9 @@ namespace ModelingAutoTraffic
                         continue;
                     }
 
-                    var timerTextBox = new System.Windows.Forms.Label();
+                    var timerTextBox = new Label();
                     timerTextBox.Text = "";
-                    timerTextBox.Location = new Point(POSITION_X_TIMER_REVERSE_CARS, coordYReverseTimer + offsetDownTimer);
+                    timerTextBox.Location = new Point(POSITION_X_TIMER_REVERSE_CARS, timerOffset + coordYReverse);
                     Controls.Add(timerTextBox);
                     timerTextBox.BringToFront();
                     _timersAppearsReverseCar.Add((timerTextBox, null));
@@ -1109,7 +1140,7 @@ namespace ModelingAutoTraffic
                     reverseCar.cur_x = wid + 890 + (i * 100);
                     reverseCar.start_y = coordYReverse;
                     reverseCar.cur_y = coordYReverse;
-                    reverseCar.speed = GetRandomSpeed();// new Random().Next(_minSpeed, _maxSpeed);
+                    reverseCar.speed = GetRandomSpeed();
                     reverseCar.isGenerate = false;
                     reverseCar.goal_x *= -1;
 

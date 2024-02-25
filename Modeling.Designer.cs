@@ -55,43 +55,46 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Image = ((System.Drawing.Image)(resources.GetObject("buttonStart.Image")));
-            this.buttonStart.Location = new System.Drawing.Point(792, 15);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStart.BackgroundImage")));
+            this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonStart.Location = new System.Drawing.Point(1098, 14);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(4);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(43, 39);
+            this.buttonStart.Size = new System.Drawing.Size(50, 50);
             this.buttonStart.TabIndex = 0;
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonStop
             // 
-            this.buttonStop.Image = ((System.Drawing.Image)(resources.GetObject("buttonStop.Image")));
-            this.buttonStop.Location = new System.Drawing.Point(893, 15);
-            this.buttonStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStop.BackgroundImage")));
+            this.buttonStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonStop.Location = new System.Drawing.Point(1214, 14);
+            this.buttonStop.Margin = new System.Windows.Forms.Padding(4);
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(43, 39);
+            this.buttonStop.Size = new System.Drawing.Size(50, 50);
             this.buttonStop.TabIndex = 1;
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // buttonPause
             // 
-            this.buttonPause.Image = ((System.Drawing.Image)(resources.GetObject("buttonPause.Image")));
-            this.buttonPause.Location = new System.Drawing.Point(843, 15);
-            this.buttonPause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPause.BackgroundImage")));
+            this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPause.Location = new System.Drawing.Point(1156, 14);
+            this.buttonPause.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(43, 39);
+            this.buttonPause.Size = new System.Drawing.Size(50, 50);
             this.buttonPause.TabIndex = 2;
             this.buttonPause.UseVisualStyleBackColor = true;
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(84, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 101);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(869, 382);
+            this.pictureBox1.Size = new System.Drawing.Size(1300, 600);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -166,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 492);
+            this.ClientSize = new System.Drawing.Size(1448, 773);
             this.Controls.Add(this.pictureSpeedLimitFifth);
             this.Controls.Add(this.pictureSpeedLimitFourth);
             this.Controls.Add(this.pictureSpeedLimitThird);
@@ -177,8 +180,9 @@
             this.Controls.Add(this.buttonPause);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Modeling";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Модель транспортного потока";
             this.Load += new System.EventHandler(this.Modeling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
